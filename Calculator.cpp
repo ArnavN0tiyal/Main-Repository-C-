@@ -3,8 +3,7 @@
 #include <cmath>
 using namespace std;
 
-//* Calculator
-// TODO: Make a trignometric calculator in this
+// Calculator
 void calculator() {
     int x;
     int y;
@@ -316,7 +315,7 @@ void calculator() {
             while (z != 0);
         }
 
-//! VERY IMPORTANT DON'T TAMPER WITH OR ELSE A TON OF ERRORS WILL HAPPEN!!!
+// VERY IMPORTANT DON'T TAMPER WITH OR ELSE A TON OF ERRORS WILL HAPPEN!!!
 }
  while(infinitelooper != infinite2);
 }
