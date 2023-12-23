@@ -55,7 +55,17 @@ void calculator() {
             cout << "Type the divisor: ";
             cin >> divisor;
             double quotient = dividend/divisor;
-            cout << "The quotient is: " << quotient << "\n";
+            try {
+                if (divisor != 0) {
+                   cout << "The quotient is: " << quotient << "\n";
+                } else {
+                    throw 404;
+                }
+            }
+            catch(int Error) {
+                cout << "Cannot Divide by Zero \n";
+                cout << "Error: " << Error << "\n";
+            }
         }
         if (x == 5) {
             do {
