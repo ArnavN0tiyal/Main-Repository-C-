@@ -113,7 +113,7 @@ void calculator() {
                 cout << "Type a number to round: ";
                 cin >> round_x;
                 double rounding = round(round_x);
-                cout << round_x << " rounded is: " << rounding;
+                cout << round_x << " rounded is: " << rounding << "\n" << "\n";
 
 
             // Absolute Value
