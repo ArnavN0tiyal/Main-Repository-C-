@@ -156,7 +156,7 @@ void calculator() {
             // Exponential
             } else if (y == 5) {
                 double exp_x;
-                cout << "Type the number to exponential";
+                cout << "Type the number to exponential: ";
                 cin >> exp_x;
                 double exp_result = exp(exp_x);
                 cout << "The exponential of " << exp_x << " is: " << exp_result << "\n" << "\n";
@@ -186,7 +186,7 @@ void calculator() {
                 cout << "Type a number to find itd base 2 logarithm: ";
                 cin >> log2_x;
                 double log_2_result = log2(log2_x);
-                cout << "The base 2 log of" << log2_x << " is: " << log_2_result << "\n" << "\n";
+                cout << "The base 2 log of " << log2_x << " is: " << log_2_result << "\n" << "\n";
 
             
             // Floor
