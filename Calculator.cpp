@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-// Calculator (WIP)
+// Calculator
 // Unfortunatly I was unable to add the remainder in divide function :(    
 void calculator() {
     int x;
