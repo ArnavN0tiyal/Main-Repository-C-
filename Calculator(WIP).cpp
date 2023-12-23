@@ -4,10 +4,8 @@
 using namespace std;
 
 // Calculator (WIP)
-// Unfortunatly I was unable to add the remainder in divide function :(
+// Unfortunatly I was unable to add the remainder in divide function :(    
 void calculator() {
-    string empty = "";
-    string default2 = "";
     int x;
     int y;
     int infinitelooper = 1;
@@ -22,7 +20,6 @@ void calculator() {
      cout << "Type a number to use the following: ";
      cin >> x;
      // Addition
-     try {
         if (x == 1) {
             double addend1;
             double addend2;
@@ -32,13 +29,7 @@ void calculator() {
             cin >> addend2;
             double sum = addend1 + addend2;
             cout << "The sum is: " << sum << "\n";
-        } else {
-            throw empty;
-        }
-    // Subtract
-     }
-     catch(...) {
-        if (x == 2) {
+        } else if (x == 2) {
             double minuend;
             double subtrahend;
             cout << "Type the minuend: ";
@@ -47,11 +38,7 @@ void calculator() {
             cin >> subtrahend;
             double difference = minuend - subtrahend;
             cout << "The difference is: " << difference << "\n";
-        }
-     }
-     // Multiply
-     try {
-        if (x == 3) {
+        } else if (x == 3) {
             double mutiplier;
             double multiplicand;
             cout << "Type the multiplier: ";
@@ -60,13 +47,7 @@ void calculator() {
             cin >> multiplicand;
             double product = mutiplier * multiplicand;
             cout << "The product is: " << product << "\n";
-        } else {
-            throw default2;
-        }
-     }
-     // Divide
-     catch(...) {
-        if (x == 4) {
+        } else if (x == 4) {
             double dividend;
             double divisor;
             cout << "Type the dividend: ";
@@ -76,7 +57,6 @@ void calculator() {
             double quotient = dividend/divisor;
             cout << "The quotient is: " << quotient << "\n";
         }
-     }
         if (x == 5) {
             do {
             cout << "Scientific Calculator: \n";
