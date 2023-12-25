@@ -5,26 +5,25 @@ using namespace std;
 
 // Calculator
 void calculator() {
-    int x;
-    int y;
-    int z;
-    int infinitelooper = 1;
-    int infinite2 = 2;
+    int main_choice, choice_2, choice_3, choice_4;
+    int infinitelooper = 1, infinite2 = 2;
     do {
      cout << "\n";
-     cout << "Basic Calculator: \n";
+     cout << "Basic calculator: \n";
      cout << "1) Add x and y \n";
      cout << "2) Subtract x and y \n"; 
      cout << "3) Multiply x and y \n";
-     cout << "4) Divide x and y \n";
-     cout << "5) Scientific Calculator \n";
-     cout << "6) Trigometric Calculator \n";
+     cout << "4) Divide x and y \n \n";
+     cout << "Other Calculators: \n";
+     cout << "5) Scientific calculator \n";
+     cout << "6) Trigometric calculator \n";
+     cout << "7) Temperature calculator \n";
      cout << "Type a number to use the following: ";
-     cin >> x;
+     cin >> main_choice;
 
 
      // Addition
-        if (x == 1) {
+        if (main_choice == 1) {
             double addend1;
             double addend2;
             cout << "Type the first addend: ";
@@ -36,7 +35,7 @@ void calculator() {
 
 
     // Subtract
-        } else if (x == 2) {
+        } else if (main_choice == 2) {
             double minuend;
             double subtrahend;
             cout << "Type the minuend: ";
@@ -48,7 +47,7 @@ void calculator() {
 
 
     // Multiply
-        } else if (x == 3) {
+        } else if (main_choice == 3) {
             double mutiplier;
             double multiplicand;
             cout << "Type the multiplier: ";
@@ -60,7 +59,7 @@ void calculator() {
 
 
     // Divide
-        } else if (x == 4) {
+        } else if (main_choice == 4) {
             double dividend;
             double divisor;
             cout << "Type the dividend: ";
@@ -81,11 +80,11 @@ void calculator() {
             }
 
 
-    // Scientific Calculator
-        } else if (x == 5) {
+    // Scientific calculator
+        } else if (main_choice == 5) {
             cout << "\n";
             do {
-            cout << "Scientific Calculator: \n"; 
+            cout << "Scientific calculator: \n"; 
             cout << "0) Exit \n";
             cout << "Value: \n";
             cout << "1) Round x \n";
@@ -97,18 +96,18 @@ void calculator() {
             cout << "5) Raise x to the power of y \n"; 
             cout << "6) Exponential of x \n"; 
             cout << "Logarithms: \n";
-            cout << "7) Natrual Logarithm of x \n";
-            cout << "8) Base 10 Logarithm of x \n"; 
-            cout << "9) Base 2 Logarithm of x\\y \n";
+            cout << "7) Natrual logarithm of x \n";
+            cout << "8) Base 10 logarithm of x \n"; 
+            cout << "9) Base 2 logarithm of x \n";
             cout << "Floor and ceiling: \n";
             cout << "10) Floor of x \n";
             cout << "11) Ceiling of x \n";
             cout << "Type a number to use the following: ";
-            cin >> y;
+            cin >> choice_2;
 
 
             // Round
-            if (y == 1) {
+            if (choice_2 == 1) {
                 double round_x;
                 cout << "Type a number to round: ";
                 cin >> round_x;
@@ -116,8 +115,8 @@ void calculator() {
                 cout << round_x << " rounded is: " << rounding << "\n" << "\n";
 
 
-            // Absolute Value
-            } else if (y == 2) {
+            // Absolute value
+            } else if (choice_2 == 2) {
                 double absolute_x;
                 cout << "Type a number to find its absolute value: ";
                 cin >> absolute_x;
@@ -125,8 +124,8 @@ void calculator() {
                 cout << "The absolute value of " << absolute_x << " is: " << absolute_value << "\n" << "\n"; 
 
 
-            // Square Root
-            } else if (y == 3) {
+            // Square root
+            } else if (choice_2 == 3) {
                 double sqrt_x;
                 cout << "Type a number to find its square root: ";
                 cin >> sqrt_x;
@@ -135,7 +134,7 @@ void calculator() {
 
 
             // Cube root
-            } else if (y == 4) {
+            } else if (choice_2 == 4) {
                 double cuberoot_x;
                 cout << "Type a number to find its cube root: ";
                 cin >> cuberoot_x;
@@ -144,7 +143,7 @@ void calculator() {
 
 
             // Power
-            } else if (y == 5) {
+            } else if (choice_2 == 5) {
                 double base;
                 double exponent;
                 cout << "Type the base number: ";
@@ -156,7 +155,7 @@ void calculator() {
 
 
             // Exponential
-            } else if (y == 6) {
+            } else if (choice_2 == 6) {
                 double exp_x;
                 cout << "Type the number to exponential: ";
                 cin >> exp_x;
@@ -164,8 +163,8 @@ void calculator() {
                 cout << "The exponential of " << exp_x << " is: " << exp_result << "\n" << "\n";
 
 
-            // Natural Logarithm
-            } else if (y == 7) {
+            // Natural logarithm
+            } else if (choice_2 == 7) {
                 double log_x;
                 cout << "Type a number to find its natural logarithm: ";
                 cin >> log_x;
@@ -173,8 +172,8 @@ void calculator() {
                 cout << "The natural log of " << log_x << " is: " << natural_log << "\n" << "\n";
 
 
-            // Base 10 Logarithm
-            } else if (y == 8) {
+            // Base 10 logarithm
+            } else if (choice_2 == 8) {
                 double log10_x;
                 cout << "Type a number to find its base 10 logarithm: ";
                 cin >> log10_x;
@@ -182,8 +181,8 @@ void calculator() {
                 cout << "The base 10 log of " << log10_x << " is: " << log_10_result << "\n" << "\n";
 
 
-            // Base 2 Logarithm
-            } else if (y == 9) {
+            // Base 2 logarithm
+            } else if (choice_2 == 9) {
                 double log2_x;
                 cout << "Type a number to find itd base 2 logarithm: ";
                 cin >> log2_x;
@@ -192,7 +191,7 @@ void calculator() {
 
             
             // Floor
-            } else if (y == 10) {
+            } else if (choice_2 == 10) {
                 double floor_x;
                 cout << "Type a number to find its floor: ";
                 cin >> floor_x;
@@ -200,39 +199,42 @@ void calculator() {
                 cout << "The floor of " << floor_x << " is: " << floor_result << "\n" << "\n";
 
             
-            // Celing
-            } else if (y == 11) {
-                double celing_x;
+            // Ceiling
+            } else if (choice_2 == 11) {
+                double ceiling_x;
                 cout << "Type a number to find its ceiling: ";
-                cin >> celing_x;
-                double celing_result = ceil(celing_x);
-                cout << "The ceiling of " << celing_x << " is: " << celing_result << "\n" << "\n";
+                cin >> ceiling_x;
+                double celing_result = ceil(ceiling_x);
+                cout << "The ceiling of " << ceiling_x << " is: " << celing_result << "\n" << "\n";
             }
             }
-            while (y != 0);
-        } else if (x == 6) {
+            while (choice_2 != 0);
+
+
+        // Trignometric calculator
+        } else if (main_choice== 6) {
             cout << "\n";
             do {
-            cout << "Trignometric Calculator: \n";
+            cout << "Trignometric calculator: \n";
             cout << "0) Exit \n";
             cout << "Normal Functions: \n";
             cout << "1) Sin of x \n";
             cout << "2) Cos of x \n";
             cout << "3) Tan of x \n";
             cout << "Hyperbolics: \n";
-            cout << "4) Sinh of x \\ Hyperbolic Sin of x \n";
-            cout << "5) Cosh of x \\ Hyperbolic Cos of x \n";
-            cout << "6) Tanh of x \\ Hyperbolic Tan of x \n";
+            cout << "4) Sinh of x \\ Hyperbolic sin of x \n";
+            cout << "5) Cosh of x \\ Hyperbolic cos of x \n";
+            cout << "6) Tanh of x \\ Hyperbolic tan of x \n";
             cout << "Arc Functions: \n";
             cout << "7) Arcsin of x \n";
             cout << "8) Arccos of x \n";
             cout << "9) Arctan of x \n";
             cout << "Type a number to use the following: ";
-            cin >> z;
+            cin >> choice_3;
 
 
             // Sin
-            if (z == 1) {
+            if (choice_3 == 1) {
                 double sin_x;
                 cout << "Type a number to find its sin: ";
                 cin >> sin_x;
@@ -241,7 +243,7 @@ void calculator() {
 
 
             // Cos
-            } else if (z == 2) {
+            } else if (choice_3 == 2) {
                 double cos_x;
                 cout << "Type a number to find its cos: ";
                 cin >> cos_x;
@@ -250,7 +252,7 @@ void calculator() {
 
 
             // Tan
-            } else if (z == 3) {
+            } else if (choice_3 == 3) {
                 double tan_x;
                 cout << "Type a number to find its tan: ";
                 cin >> tan_x;
@@ -259,7 +261,7 @@ void calculator() {
 
 
             // Hyperbolic Sin
-            } else if (z == 4) {
+            } else if (choice_3 == 4) {
               double sinh_x;
               cout << "Type a number to find its hyperbolic sin: ";
               cin >> sinh_x;
@@ -268,7 +270,7 @@ void calculator() {
 
 
             // Hyperbolic Cos
-            } else if (z == 5) {
+            } else if (choice_3 == 5) {
                 double cosh_x;
                 cout << "Type a number to find its hyperbolic cos: ";
                 cin >> cosh_x;
@@ -277,7 +279,7 @@ void calculator() {
 
 
             // Hyperbolic Tan
-            } else if (z == 6) {
+            } else if (choice_3 == 6) {
                 double tanh_x;
                 cout << "Type a number to find its hyperbolic tan: ";
                 cin >> tanh_x;
@@ -286,7 +288,7 @@ void calculator() {
 
 
             // Arcsin
-            } else if (z == 7) {
+            } else if (choice_3 == 7) {
                 double arcsin_x;
                 cout << "Type a number to find its arcsin: ";
                 cin >> arcsin_x;
@@ -295,7 +297,7 @@ void calculator() {
 
             
             // Arccos
-            } else if (z == 8) {
+            } else if (choice_3 == 8) {
                 double arccos_x;
                 cout << "Type a number to find its arccos: ";
                 cin >> arccos_x;
@@ -304,7 +306,7 @@ void calculator() {
 
 
             // Arctan
-            } else if (z == 9) {
+            } else if (choice_3 == 9) {
                 double arctan_x;
                 cout << "Type a number to find its arctan: ";
                 cin >> arctan_x;
@@ -312,10 +314,83 @@ void calculator() {
                 cout << "The arctan of " << arctan_x << " is: " << arctan_result << "\n" << "\n";
             }
             }
-            while (z != 0);
+            while (choice_3 != 0);
+
+
+        // Temperature calculator
+        } else if (main_choice == 7) {
+            cout << "\n";
+             do {
+                double Fahrenheit;
+                double Celsius;
+                double Kelvin;
+                cout << "Temperature calculator: \n";
+                cout << "0) Exit \n";
+                cout << "Fahrenheit: \n";
+                cout << "1) Fahrenheit to celsius \n";
+                cout << "2) Fahrenheit to kelvin \n";
+                cout << "Celcius: \n";
+                cout << "3) Celsius to fahrenheit \n";
+                cout << "4) Celsius to kelvin \n";
+                cout << "Kelvin: \n";
+                cout << "5) Kelvin to fahrenheit \n";
+                cout << "6) Kelvin to celsius \n";
+                cout << "Type a number to use the following: ";
+                cin >> choice_4;
+
+
+                // Fahrenheit to celsius
+                if (choice_4 == 1) {
+                    cout << "Type the number you want to convert from fahrenheit to celcius: ";
+                    cin >> Fahrenheit;
+                    double Celsius_convert_1 = (Fahrenheit - 32)*5/9;
+                    cout << Fahrenheit << "°" << " fahrenheit convereted to celsius is: " << Celsius_convert_1 << "\n" << "\n";
+
+
+                // Fahrenheit to kelvin
+                } else if (choice_4 == 2) {
+                    cout << "Type the number you want to convert from fahrenheit to kelvin: ";
+                    cin >> Fahrenheit;
+                    double Kelvin_convert_1 = (Fahrenheit - 32)*5/9 + 273.15;
+                    cout << Fahrenheit << "°" << " fahrenheit converted to kevlin is: " << Kelvin_convert_1 << "\n" << "\n";
+
+
+                // Celsius to fahrenheit
+                } else if (choice_4 == 3) {
+                    cout << "Type the number you want to convert from celsius to fahrenheit: ";
+                    cin >> Celsius;
+                    double Fahrenheit_convert_1 = (Celsius * 9/5) + 32 ;
+                    cout << Celsius << "°" << " celsius converted to fahrenheit is: " << Fahrenheit_convert_1 << "\n" << "\n";
+
+
+                // Celsius to kelvin
+                } else if (choice_4 == 4) {
+                    cout << "Type the number you want to convert from celsius to kelvin: ";
+                    cin >> Celsius;
+                    double Kelvin_convert_2 =  Celsius + 273.15;
+                    cout << Celsius << "°" << " celsius converted to kelvin is: " << Kelvin_convert_2 << "\n" << "\n";
+
+
+                // Kelvin to fahrenheit
+                } else if (choice_4 == 5) {
+                    cout << "Type the number you want to convert from kelvin to fahrenheit: ";
+                    cin >> Kelvin;
+                    double Fahrenheit_convert_2 =  (Kelvin - 273.15) * 9/5 + 32;
+                    cout << Kelvin << "°" << " kelvin converted to fahrenheit is: " << Fahrenheit_convert_2 << "\n" << "\n";
+
+
+                // Kelvin to celsius
+                } else if (choice_4 == 6) {
+                    cout << "Type the number you want to convert from kelvin to celsius: ";
+                    cin >> Kelvin;
+                    double Celsius_convert_2 = Kelvin - 273.15;
+                    cout << Kelvin << "°" << " kelvin converted to celsius is: " << Celsius_convert_2 << "\n" << "\n";
+                }
+             }
+             while(choice_4 != 0);
         }
 
-// VERY IMPORTANT DON'T TAMPER WITH OR ELSE A TON OF ERRORS WILL HAPPEN!!!
+/* !!VERY IMPORTANT DON'T TAMPER WITH OR ELSE A TON OF ERRORS WILL HAPPEN!! */
 }
  while(infinitelooper != infinite2);
 }
