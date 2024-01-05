@@ -9,7 +9,7 @@ Hi! My name is Arnav Notiyal. I like coding in java and c++. Though I don't have
 * 🌍  I'm based in India
 * ✉️  You can contact me at [arnavnotiyal77@gmail.com](mailto:arnavnotiyal77@gmail.com)
 * 🧠  I'm learning Java
-* ⚡  I like playing roblox and minecraft and I am bit good in figma, I used it to make my profile icon but don't ask me to make yours because I am not too good at it.
+* ⚡  I like playing roblox and minecraft and I am bit good in figma.
 
 ### Skills
 
