@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalTime;
 import java.io.IOException;
@@ -9,8 +10,9 @@ public class Terminal {
     static Process proc;
     static Scanner sc = new Scanner(System.in);
     static Runtime run = Runtime.getRuntime();
+    static int choice; 
 public static void main(String[] args) throws IOException {
-    System.out.println("Nevertx NeVerox [Version 1.1]\n(c) Nevertx. All rights unreserved.\n");
+    System.out.println("Nevertx NeVerox [Version 1.1.2834.25816]\n(c) Nevertx. All rights unreserved.\n");
     do {
         if (print == 1) {
             System.out.print("C:\\" + username + "\\" + brand + ">");
@@ -153,6 +155,23 @@ public static void executeCmd(String cmd) throws IOException {
                 case "Shutdown /h":
                 case "SHUTDOWN /h":
                 shutdown_9();
+                case "java list":
+                case "Java list":
+                case "Java List":
+                case "JAVA LIST":
+                java_list();
+                break;
+                case "java project":
+                case "Java project":
+                case "Java Project":
+                case "JAVA PROJECT":
+                java_project();
+                break;
+                case "todo manager":
+                case "Todo manager":
+                case "Todo Manager":
+                case "TODO MANAGER":
+                Todo_Manager();
                 break;
                 default:
                 System.out.println("\'" + cmd + "\'" + " is not recognized as a internal or external command.\n");
@@ -161,7 +180,7 @@ public static void executeCmd(String cmd) throws IOException {
 }
 
 public static void help() {
-    System.out.println("ECHO         Prints a string on the console or turns on or off command echoing\nVERIFY       Verifies if that the files are correctly written to the Devops disk\nTIME         Shows the time\nEXIT         Exits the terminal\nADD          Adds two numbers\nSUB          Subtracts two numbers\nMUL          Multiplies two numbers\nDIV          Divides two numbers\nUSERNAME     Sets your username\nBRANDTYPE    Sets the user's computer brand\nOPEN         Opens a program. To see the list of programs that work, type \"programs\" in the command line\nSHUTDOWN     Allows proper and local shutdown of the computer\n");
+    System.out.println("ECHO         Prints a string on the console or turns on or off command echoing\nVERIFY       Verifies if that the files are correctly written to the Devops disk\nTIME         Shows the time\nEXIT         Exits the terminal\nADD          Adds two numbers\nSUB          Subtracts two numbers\nMUL          Multiplies two numbers\nDIV          Divides two numbers\nUSERNAME     Sets your username\nBRANDTYPE    Sets the user's computer brand\nOPEN         Opens a program. To see the list of programs that work, type \"programs\" in the command line\nSHUTDOWN     Allows proper and local shutdown of the computer\nJAVA LIST    Gives a bit of help about java lists\nJAVA PROJECT Gives some projects to do in java\nTODO MANAGER Runs a todo manager\n");
 }
 
 public static void echo() {
@@ -338,5 +357,62 @@ public static void shutdown_8() throws IOException {
 
 public static void shutdown_9() throws IOException {
     proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/h"});
+ }
+
+public static void java_list() {
+        System.out.println("Math Functions:\n1) abs(x)\n2) acos(x)\n3) asin(x)\n4) atan(x)\n5) atan2(y,x)\n6) coordinates(x, y)\n7) brt(x)\n8) ceil(x)\n9) copySign(x, y)\n10) cos(x)\n11) cosh(x)\n12) exp(x)\n13) expm1(x)\n14) floor(x)\n15) getExponent(x)\n16) hypot(x, y)\n17) IEEEremainder(x, y)\n18) log(x)\n19) log10(x)\n20) log1p(x)\n21) doublemax(x, y)\n22) min(x, y)\n23) extAfter(x, y)\n24) nextUp(x)\n25) pow(x, y)\n26) random()\n27) round(x)\n28) rint(x)\n29) signum(x)\n30) sin(x)\n31) sinh(x)\n32) sqrt(x)\n33) tan(x)\n34) tanh(x)\n35) toDegrees(x)\n36) toRadians(x)\n37) ulp(x)"); 
+        System.out.println("ArrayLists:\nFormat - ArrayList<VarType> myArrayListName = new ArrayList<VarType>();\nFunctions:\n1) arraylist.add(\"Hello World\");\n2) arraylist.remove(0);\n3) arraylist.clear();\n4) arraylist.size();\n5) arraylist.get(0);\n6) arraylist.set(0, \"Hello World\")\nHow to loop through a arraylist:\nfor (int i = 0; i < arraylist.size(); i++) {\n System.out.println(arraylist.get(i));\n}\nor\nfor (String i : arraylist) {\n System.out.println(arraylist)\n}");
+        System.out.println("Linked List is the same as arraylists but with extra functions. They're:\n1) addFirst();\n2) addLast();\n3) removeFirst();\n4) removeLast();\n5) getFirst();\n6) getLast();");
+        System.out.println("Hashmap:\nFormat - Hashmap<VarType, VarType> myhashmapname = new Hashmap<VarType, VarType>();\nFunctions\n1) hashmap.put(\"Hello World\");\n2) hashmap.get(0);\n3) hashmap.remove(0);\n4) hashmap.clear();\n5) hashmap.size();\nHow to loop through hashmaps *Keys*:\nfor (String i : hashmap.keys()) {\n System.out.println(i)\n}\nValues:\nfor (String i : hashmap.values()) {\n System.out.println(i)\n}");
+        System.out.println("Hashset:\nFormat is same as arraylists or linkedlists\nFunctions:\n1) hashset.add(\"Hello World\");\n2) hashset.contains(\"Hello World\");\n3) hashset.remove(0);\n4) hashset.clear();\n5) hashset.size();\nLooping through a hashmap is also the same as arraylists and linkedlists");
+        System.out.println("Wrapper Classes:\nWe can't do ArrayList<int> array = new ArrayList<int>(); etc with any list type, instead, we use wrapper classes, like: Integer x = 10;, ArrayList<Boolean> array = new ArrayList<Boolean>(); etc. The types are:\n1) int to Integer\n2) float to Float\n3) double to Double\n4) boolean to Boolean\n5) char to Character\nWe can also get certain information about variables, Here are some functions which get certain information about variables:\n1) intvalue()\n2) byteValue()\n3) shortValue()\n4) longValue()\n5) floatValue()\n6) doubleValue()\n7) charValue()\n8) booleanValue()\n");
+ }
+public static void java_project() {
+    System.out.println("Projects: 1) Number Guessing Game 2) Temperature Converter 3) Simple Chat Application 4) Guess the Word Game 5) Rock, Paper, Scissors Game 6) Basic ATM Simulator\n");
+ }
+public static void Todo_Manager() {
+    ArrayList<String> Tasks = new ArrayList<String>();
+    Tasks.add("Tasks:");
+    System.out.println("Welcome to your todo manager");
+    do {
+        System.out.print("0) Exit\n1) View tasks\n2) Add task\n3) Remove task\nType the index number of the function you want to use: ");
+        choice = sc.nextInt();
+        switch(choice) {
+        case 0:
+        choice = 0;
+        break;
+        case 1:
+        if (Tasks.size() == 1) {
+          System.out.println("No tasks");
+        } else {
+         for (String i : Tasks) {
+           System.out.println(i);
+         }
+        }
+        break;
+        case 2:
+        String line = sc.nextLine();
+        System.out.print("Type your task: ");
+        line = sc.nextLine();
+        Tasks.add(Tasks.size() + ". " + line);
+        System.out.println("Succesfully added the task: " + line);
+        break;
+        case 3:
+        if (Tasks.size() == 1) {
+          System.out.println("No task to remove");
+        } else { 
+            for (String i : Tasks) {
+                System.out.println(i);
+            }
+        System.out.print("Type the index number of the task you want to remove: ");
+        int remove = sc.nextInt();
+        System.out.println("Successfully removed the task: " + Tasks.get(remove));
+        Tasks.remove(remove);
+        }
+        break;
+        default:
+        System.out.println("Type a vaild choice number");
+      }
+    }while(choice != 0);
  }
 }
