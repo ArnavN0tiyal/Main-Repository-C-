@@ -1,7 +1,9 @@
+package terminal;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalTime;
 import java.io.IOException;
+
 public class Terminal {
     static int exit = 1;
     static int print = 1;
@@ -10,15 +12,16 @@ public class Terminal {
     static Process proc;
     static Scanner sc = new Scanner(System.in);
     static Runtime run = Runtime.getRuntime();
-    static int choice; 
+    static int choice;
+    static String default_brand = "Dell";
+    static String default_username = "User";
+    static String confirm;
 public static void main(String[] args) throws IOException {
-    System.out.println("Nevertx NeVerox [Version 1.1.2834.25816]\n(c) Nevertx. All rights unreserved.\n");
+    System.out.println("Nevertx NeVerox Java [Version 1.1.3140.2560]\n(c) Nevertx. All rights unreserved.\n");
     do {
         if (print == 1) {
             System.out.print("C:\\" + username + "\\" + brand + ">");
-        } else {
-            System.out.print("");
-        }
+        } else;
         String cmd = sc.nextLine();
         executeCmd(cmd);
     } while (exit != 0);
@@ -174,7 +177,9 @@ public static void executeCmd(String cmd) throws IOException {
                 Todo_Manager();
                 break;
                 default:
-                System.out.println("\'" + cmd + "\'" + " is not recognized as a internal or external command.\n");
+                if (!cmd.isEmpty()) {
+                    System.out.println("\'" + cmd + "\'" + " is not recognized as a internal or external command.\n");
+                } else;
                 break;
             }
 }
@@ -190,11 +195,11 @@ public static void echo() {
 }
 
 public static void echo_on() {
-    print = 0;
+    print = 1;
 }
 
 public static void echo_off() {
-    print = 1;
+    print = 0;
 }
 
 public static void verify() {
@@ -324,39 +329,93 @@ public static void shutdown() {
     System.out.println("How to use: shutdown /i, /l, /s, /sg, /r, /g, /a, /p, /h\nNo args    This is the same as doing /?\n/i         Shows the graphical user interface\n/?         Gives the type of shutdown the user can do\n/l         Logs off the computer\n/s         Complete shutdown of the computer\n/sg        Shutdowns the computer. Then on the next boot, if automatic sign in is enabled then it will automaticly sign in to the user's computer\n/r         Shutdowns then restarts\n/g         Shutdowns and restarts. After the system is rebooted, if automatic sign in is enabled, the user will automaticly sign in\n/a         Abort a system shutdown *Can only be used in time out period*\n/p         Turns off the computer without any warning or time out\n/h         Hibernate the local computer\n");
 }
 public static void shutdown_1() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/i"});
+    System.out.print("Are you sure?\nType yes or no: ");
+    confirm = sc.nextLine();
+    if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/i"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_2() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/l"});
+      System.out.print("Are you sure?\nType yes or no: ");
+      confirm = sc.nextLine();
+      if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/l"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_3() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/s"});
+      System.out.print("Are you sure?\nType yes or no: ");
+      confirm = sc.nextLine();
+      if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/s"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_4() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/sg"});
+     System.out.print("Are you sure?\nType yes or no: ");
+     confirm = sc.nextLine();
+     if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/sg"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_5() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/r"});
+      System.out.print("Are you sure?\nType yes or no: ");
+      confirm = sc.nextLine();
+      if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/r"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_6() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/g"});
+      System.out.print("Are you sure?\nType yes or no: ");
+      confirm = sc.nextLine();
+      if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/g"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_7() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/a"});
+     System.out.print("Are you sure?\nType yes or no: ");
+     confirm = sc.nextLine();
+     if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/a"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_8() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/p"});
+      System.out.print("Are you sure?\nType yes or no: ");
+      confirm = sc.nextLine();
+      if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/p"});
+    } else {
+        System.out.print("\n");
+    }
 }
 
 public static void shutdown_9() throws IOException {
-    proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/h"});
+      System.out.print("Are you sure?\nType yes or no: ");
+      confirm = sc.nextLine();
+      if (confirm.equalsIgnoreCase("yes")) {
+        proc = run.exec(new String[]{"cmd","/C","Start","shutdown", "/h"});
+    } else {
+        System.out.print("\n");
+    }
  }
 
 public static void java_list() {
@@ -413,6 +472,6 @@ public static void Todo_Manager() {
         default:
         System.out.println("Type a vaild choice number");
       }
-    }while(choice != 0);
+    } while(choice != 0);
  }
 }
