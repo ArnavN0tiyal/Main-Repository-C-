@@ -17,7 +17,7 @@ public class Terminal {
     static String default_username = "User";
     static String confirm;
 public static void main(String[] args) throws IOException {
-    System.out.println("Nevertx NeVerox Java [Version 1.1.3140.2560]\n(c) Nevertx. All rights unreserved.\n");
+    System.out.println("Nevertx NeVerox Java [Version 1.1.3150.2712]\n(c) Nevertx. All rights unreserved.\n");
     do {
         if (print == 1) {
             System.out.print("C:\\" + username + "\\" + brand + ">");
@@ -28,154 +28,91 @@ public static void main(String[] args) throws IOException {
   }
 public static void executeCmd(String cmd) throws IOException {
             switch(cmd) {
-                case "help":
-                case "Help":
-                case "HELP":
+                case "help","Help","HELP":
                 help();
                 break;
-                case "echo":
-                case "Echo":
-                case "ECHO":
+                case "echo","Echo","ECHO":
                 echo();
                 break;
-                case "echo on":
-                case "Echo on":
-                case "Echo On":
-                case "ECHO ON":
+                case "echo on","Echo on","Echo On","ECHO ON":
                 echo_on();
                 break;
-                case "echo off":
-                case "Echo off":
-                case "Echo Off":
-                case "ECHO OFF":
+                case "echo off","Echo off","Echo Off","ECHO OFF":
                 echo_off();
                 break;
-                case "verify":
-                case "Verify":
-                case "VERIFY":
+                case "verify","Verify","VERIFY":
                 verify();
                 break;
-                case "time":
-                case "Time":
-                case "TIME":
+                case "time","Time","TIME":
                 showtime();
                 break;
-                case "exit":
-                case "Exit":
-                case "EXIT":
+                case "exit","Exit","EXIT":
                 exit();
                 break;
-                case "add":
-                case "Add":
-                case "ADD":
+                case "add","Add","ADD":
                 addition();
                 break;
-                case "sub":
-                case "Sub":
-                case "SUB":
+                case "sub","Sub","SUB":
                 subtraction();
                 break;
-                case "mul":
-                case "Mul":
-                case "MUL":
+                case "mul","Mul","MUL":
                 multiplication();
                 break;
-                case "div":
-                case "Div":
-                case "DIV":
+                case "div","Div","DIV":
                 division();
                 break;
-                case "username":
-                case "Username":
-                case "USERNAME":
+                case "username","Username","USERNAME":
                 username();
                 break;
-                case "brandtype":
-                case "Brandtype":
-                case "BrandType":
-                case "BRANDTYPE":
+                case "brandtype","Brandtype","BrandType","BRANDTYPE":
                 brandtype();
                 break;
-                case "open":
-                case "Open":
-                case "OPEN":
+                case "open","Open","OPEN":
                 applications();
                 break;
-                case "programs":
-                case "Programs":
-                case "PROGRAMS":
+                case "programs","Programs","PROGRAMS":
                 programs();
                 break;
-                case "shutdown /?":
-                case "Shutdown /?":
-                case "SHUTDOWN /?":
-                case "shutdown":
-                case "Shutdown":
-                case "SHUTDOWN":
-                shutdown();
+                case "shutdown /?","Shutdown /?","SHUTDOWN /?","shutdown","Shutdown","SHUTDOWN":
+                shutdown_help();
                 break;
-                case "shutdown /i":
-                case "Shutdown /i":
-                case "SHUTDOWN /i":
+                case "shutdown /i","Shutdown /i","SHUTDOWN /i":
                 shutdown_1();
                 break;
-                case "shutdown /l":
-                case "Shutdown /l":
-                case "SHUTDOWN /l":
+                case "shutdown /l","Shutdown /l","SHUTDOWN /l":
                 shutdown_2();
                 break;
-                case "shutdown /s":
-                case "Shutdown /s":
-                case "SHUTDOWN /s":
+                case "shutdown /s","Shutdown /s","SHUTDOWN /s":
                 shutdown_3();
                 break;
-                case "shutdown /sg":
-                case "Shutdown /sg":
-                case "SHUTDOWN /sg":
+                case "shutdown /sg","Shutdown /sg","SHUTDOWN /sg":
                 shutdown_4();
                 break;
-                case "shutdown /r":
-                case "Shutdown /r":
-                case "SHUTDOWN /r":
+                case "shutdown /r","Shutdown /r","SHUTDOWN /r":
                 shutdown_5();
                 break;
-                case "shutdown /g":
-                case "Shutdown /g":
-                case "SHUTDOWN /g":
+                case "shutdown /g","Shutdown /g","SHUTDOWN /g":
                 shutdown_6();
                 break;
-                case "shutdown /a":
-                case "Shutdown /a":
-                case "SHUTDOWN /a":
+                case "shutdown /a","Shutdown /a","SHUTDOWN /a":
                 shutdown_7();
                 break;
-                case "shutdown /p":
-                case "Shutdown /p":
-                case "SHUTDOWN /p":
+                case "shutdown /p","Shutdown /p","SHUTDOWN /p":
                 shutdown_8();
                 break;
-                case "shutdown /h":
-                case "Shutdown /h":
-                case "SHUTDOWN /h":
+                case "shutdown /h","Shutdown /h","SHUTDOWN /h":
                 shutdown_9();
-                case "java list":
-                case "Java list":
-                case "Java List":
-                case "JAVA LIST":
+                case "java list","Java list","Java List","JAVA LIST":
                 java_list();
                 break;
-                case "java project":
-                case "Java project":
-                case "Java Project":
-                case "JAVA PROJECT":
+                case "java project","Java project","Java Project","JAVA PROJECT":
                 java_project();
                 break;
-                case "todo manager":
-                case "Todo manager":
-                case "Todo Manager":
-                case "TODO MANAGER":
-                Todo_Manager();
+                case "todo manager","Todo manager","Todo Manager","TODO MANAGER":
+                todo_Manager();
                 break;
+                case "ascii value","Ascii value","Ascii Value","ASCII VALUE":
+                ascii_value();
                 default:
                 if (!cmd.isEmpty()) {
                     System.out.println("\'" + cmd + "\'" + " is not recognized as a internal or external command.\n");
@@ -280,35 +217,16 @@ public static void applications() {
     String program = sc.nextLine();
     try {
     switch(program) {
-        case "edge":
-        case "Edge":
-        case "EDGE":
+        case "edge","Edge","EDGE":
         proc = run.exec(new String[]{"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"});
         break;
-        case "command prompt":
-        case "Command Prompt":
-        case "COMMAND PROMPT":
-        case "cmd":
-        case "Cmd":
-        case "CMD":
+        case "command prompt","Command prompt","Command Prompt","COMMAND PROMPT","cmd","Cmd","CMD":
         proc = run.exec(new String[]{"cmd","/C","Start","Nevertx Promopt"});
         break;
-        case "calculator":
-        case "CALCULATOR":
-        case "calc":
-        case "CALC":
+        case "calculator","CALCULATOR","calc","CALC":
         proc = run.exec(new String[]{"calc","/C","Start"});
         break;
-        case "vscode":
-        case "Vscode":
-        case "VSCODE":
-        case "visual studio code":
-        case "Visual studio code":
-        case "Visual Studio Code":
-        case "VISUAL STUDIO CODE":
-        case "code":
-        case "Code":
-        case "CODE":
+        case "vscode","Vscode","VSCODE","visual studio code","Visual studio code","Visual Studio Code","VISUAL STUDIO CODE","code","Code","CODE":
         proc = run.exec(new String[]{"cmd","/K","code"});
         break;
         default:
@@ -325,7 +243,7 @@ public static void programs() {
     System.out.println("1) EDGE\n2) EXPLORER\n3) VSCODE\n4) CALCULATOR\n");
 }
 
-public static void shutdown() {
+public static void shutdown_help() {
     System.out.println("How to use: shutdown /i, /l, /s, /sg, /r, /g, /a, /p, /h\nNo args    This is the same as doing /?\n/i         Shows the graphical user interface\n/?         Gives the type of shutdown the user can do\n/l         Logs off the computer\n/s         Complete shutdown of the computer\n/sg        Shutdowns the computer. Then on the next boot, if automatic sign in is enabled then it will automaticly sign in to the user's computer\n/r         Shutdowns then restarts\n/g         Shutdowns and restarts. After the system is rebooted, if automatic sign in is enabled, the user will automaticly sign in\n/a         Abort a system shutdown *Can only be used in time out period*\n/p         Turns off the computer without any warning or time out\n/h         Hibernate the local computer\n");
 }
 public static void shutdown_1() throws IOException {
@@ -429,7 +347,7 @@ public static void java_list() {
 public static void java_project() {
     System.out.println("Projects: 1) Number Guessing Game 2) Temperature Converter 3) Simple Chat Application 4) Guess the Word Game 5) Rock, Paper, Scissors Game 6) Basic ATM Simulator\n");
  }
-public static void Todo_Manager() {
+public static void todo_Manager() {
     ArrayList<String> Tasks = new ArrayList<String>();
     Tasks.add("Tasks:");
     System.out.println("Welcome to your todo manager");
@@ -473,5 +391,11 @@ public static void Todo_Manager() {
         System.out.println("Type a vaild choice number");
       }
     } while(choice != 0);
+ }
+
+ public static void ascii_value() throws IOException {
+    System.out.print("Type the character you want to get the ascii value of: ");
+    int ascii_value = System.in.read();
+    System.out.println(ascii_value + "\n");
  }
 }
