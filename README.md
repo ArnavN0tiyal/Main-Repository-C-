@@ -1,7 +1,7 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Arnav Notiyal
 =====================================================================================================================================
 
-Beginner java and c++ developer
+Amateur java developer
 -------------------------------
 
 Hi! My name is Arnav Notiyal. I like coding in java and c++. Though I don't have any job \*because I am not at the age to have one\* still I try my best to make something cool.
