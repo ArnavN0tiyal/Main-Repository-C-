@@ -122,7 +122,7 @@ public static void executeCmd(String cmd) throws IOException {
 }
 
 public static void help() {
-    System.out.println("ECHO         Prints a string on the console or turns on or off command echoing\nVERIFY       Verifies if that the files are correctly written to the Devops disk\nTIME         Shows the time\nEXIT         Exits the terminal\nADD          Adds two numbers\nSUB          Subtracts two numbers\nMUL          Multiplies two numbers\nDIV          Divides two numbers\nUSERNAME     Sets your username\nBRANDTYPE    Sets the user's computer brand\nOPEN         Opens a program. To see the list of programs that work, type \"programs\" in the command line\nSHUTDOWN     Allows proper and local shutdown of the computer\nJAVA LIST    Gives a bit of help about java lists\nJAVA PROJECT Gives some projects to do in java\nTODO MANAGER Runs a todo manager\n");
+    System.out.println("ECHO         Prints a string on the console or turns on or off command echoing\nVERIFY       Verifies if that the files are correctly written to the Devops disk\nTIME         Shows the time\nEXIT         Exits the terminal\nADD          Adds two numbers\nSUB          Subtracts two numbers\nMUL          Multiplies two numbers\nDIV          Divides two numbers\nUSERNAME     Sets your username\nBRANDTYPE    Sets the user's computer brand\nOPEN         Opens a program. To see the list of programs that work, type \"programs\" in the command line\nSHUTDOWN     Allows proper and local shutdown of the computer\nJAVA LIST    Gives a bit of help about java lists\nJAVA PROJECT Gives some projects to do in java\nTODO MANAGER Runs a todo manager\nASCII VALUE  Gives the ascii value of characters\n");
 }
 
 public static void echo() {
