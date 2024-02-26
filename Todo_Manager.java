@@ -14,7 +14,7 @@ public class Todo_Manager {
         } else if (fact == 2) {
             System.out.println("Fact: I tried making a priority system. It didn't work :(");
         } else if (fact == 3) {
-            System.out.println("Fact: I use vscode");
+            System.out.println("Fact: I use gnu nano now");
         }
         if (secret > 1) {
             do {
