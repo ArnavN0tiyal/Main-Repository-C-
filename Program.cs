@@ -1,4 +1,6 @@
-﻿namespace Program
+using System;
+
+namespace Program
 {
     class Program
     {
